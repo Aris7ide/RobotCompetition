@@ -62,6 +62,7 @@ class RobotServiceTest {
     void shouldReportRobotValidForCompetition() {
         List<ResistanceEvaluable> validRobots = robotService.getValidRobots();
         printer.printReport(validRobots);
+        assertThat(validRobots).size().isEqualTo(3);
     }
 
 }
